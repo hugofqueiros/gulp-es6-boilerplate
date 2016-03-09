@@ -1,0 +1,36 @@
+{
+  "name": "ES6 Gulp Boilerplate",
+  "short_name": "ES6Boiler",
+  "background_color": "#ffffff",
+  "theme_color": "#f5f5f5",
+  "display": "standalone",
+  "orientation": "portrait",
+  "start_url": "/index.html",
+  "icons": [
+    {
+      "src": "/images/favicon.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/favicon.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/favicon.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    }
+  ]
+}
