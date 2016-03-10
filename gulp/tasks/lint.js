@@ -5,7 +5,9 @@ import { join } from 'path';
 import { src } from '../config';
 
 gulp.task('lint', () => {
-    gulp.src([join(src, 'scripts', '**/*.js'), '!node_modules/**'])
+    gulp.src([join(src, 'scripts', '**/*.js'),
+        join('gulp', '**/*.js'),
+        '!node_modules/**'])
         .pipe(eslint())
         .pipe(eslint.format())
         .pipe(eslint.failAfterError());

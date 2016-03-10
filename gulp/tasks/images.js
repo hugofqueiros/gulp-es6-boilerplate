@@ -19,6 +19,6 @@ gulp.task('images', () => {
             use: [pngquant()]
         }))
         .pipe(gulp.dest(join(dest, 'images')))
-        .pipe(p.size({title: 'IMAGES'}))
-        .pipe(reload({stream: true}));
+        .pipe(p.size({ title: 'IMAGES' }))
+        .pipe(reload({ stream: true }));
 });

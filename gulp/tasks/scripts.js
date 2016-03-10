@@ -34,7 +34,7 @@ const config = assign({}, watchify.args, customOpts);
 let buildBundler = browserify(config);
 
 function bundling() {
-    libs.forEach((lib => {
+    libs.forEach(((lib) => {
         buildBundler.external(lib);
     }));
 
@@ -65,7 +65,6 @@ function bundling() {
                 }
                 browserSync.reload();
             });
-
     };
 
     if (global.isWatching) {
@@ -96,7 +95,9 @@ gulp.task('scripts-vendor', () => {
             sourceRoot: '.'
         }))
         .pipe(gulp.dest(join(dest, 'js')))
-        .pipe(p.size({title: 'JS VENDOR'}));
+        .pipe(p.size({
+            title: 'JS VENDOR'
+        }));
 });
 
 gulp.task('scripts', ['scripts-vendor'], () => {

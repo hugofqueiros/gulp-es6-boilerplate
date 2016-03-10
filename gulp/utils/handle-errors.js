@@ -1,6 +1,6 @@
 import notify from 'gulp-notify';
 
-let handleErrors = function () {
+let handleErrors = function() {
     let args = Array.prototype.slice.call(arguments);
 
     notify.onError({
