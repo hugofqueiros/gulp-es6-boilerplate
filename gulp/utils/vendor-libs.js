@@ -1,5 +1,5 @@
 const libs = [
-  'lodash'
+    'lodash'
 ];
 
 export default libs;

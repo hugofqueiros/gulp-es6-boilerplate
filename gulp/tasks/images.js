@@ -10,15 +10,15 @@ const reload = browserSync.reload;
 const p = loadPlugins();
 
 gulp.task('images', () => {
-  gulp.src(join(src, 'images', '**/*.{png,jpg,jpeg,gif,ico,svg}'))
-    .pipe(p.imagemin({
-      optimizationLevel: 3,
-      progressive: true,
-      interlaced: true,
-      verbose: true,
-      use: [pngquant()]
-    }))
-    .pipe(gulp.dest(join(dest, 'images')))
-    .pipe(p.size({title: 'IMAGES'}))
-    .pipe(reload({stream: true}));
+    gulp.src(join(src, 'images', '**/*.{png,jpg,jpeg,gif,ico,svg}'))
+        .pipe(p.imagemin({
+            optimizationLevel: 3,
+            progressive: true,
+            interlaced: true,
+            verbose: true,
+            use: [pngquant()]
+        }))
+        .pipe(gulp.dest(join(dest, 'images')))
+        .pipe(p.size({title: 'IMAGES'}))
+        .pipe(reload({stream: true}));
 });

@@ -5,11 +5,11 @@ import rimraf from 'rimraf';
 import { dest } from '../config';
 
 gulp.task('clean', done => {
-  rimraf(dest, done);
+    rimraf(dest, done);
 });
 
 gulp.task('clean-build', function () {
-  del(['build']).then(function (paths) {
-    gutil.log('Deleted files/folders:\n', '\t\t\t' + gutil.colors.red(paths.join('\n')));
-  });
+    del(['build']).then(function (paths) {
+        gutil.log('Deleted files/folders:\n', '\t\t\t' + gutil.colors.red(paths.join('\n')));
+    });
 });

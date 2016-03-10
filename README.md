@@ -17,32 +17,27 @@ npm install gulp-es6-boilerplate --save
 npm install
 npm test
 ```
-```
-
-> gulp-es6-boilerplate@0.0.0 test /Users/hugo.queiros/Coding/mine/gulp-es6-boilerplate
-> gulp test
-[11:35:38] Failed to load external module babel-register
-[11:35:38] Requiring external module babel-core/register
-[11:35:41] Using gulpfile ~/Coding/mine/gulp-es6-boilerplate/gulpfile.babel.js
-[11:35:41] Task 'test' is not in your gulpfile
-[11:35:41] Please check the documentation for proper gulpfile formatting
-
-```
 
 ## Dependencies
 
-None
+- [font-awesome](https://github.com/FortAwesome/Font-Awesome): The iconic font and CSS framework
+- [lodash](https://github.com/lodash/lodash): Lodash modular utilities.
 
 ## Dev Dependencies
 
 - [autoprefixer](https://github.com/postcss/autoprefixer): Parse CSS and add vendor prefixes to CSS rules using values from the Can I Use website
+- [babel](https://github.com/babel/babel/tree/master/packages): Turn ES6 code into readable vanilla ES5 with source maps
 - [babel-core](https://github.com/babel/babel/tree/master/packages): Babel compiler core.
 - [babel-eslint](https://github.com/babel/babel-eslint): **babel-eslint** allows you to lint **ALL** valid Babel code with the fantastic [ESLint](https://github.com/eslint/eslint).
 - [babel-preset-es2015](https://github.com/babel/babel/tree/master/packages): Babel preset for all es2015 plugins.
+- [babel-register](https://github.com/babel/babel/tree/master/packages): babel require hook
 - [babelify](https://github.com/babel/babelify): Babel browserify transform
 - [browser-sync](https://github.com/browsersync/browser-sync): Live CSS Reload &amp; Browser Syncing
 - [browserify](https://github.com/substack/node-browserify): browser-side require() the node way
+- [connect-logger](https://github.com/geta6/connect-logger): connect middleware for logging
+- [cssnano](https://github.com/ben-eb/cssnano): A modular minifier, built on top of the PostCSS ecosystem.
 - [david](https://github.com/alanshaw/david): Node.js module that tells you when your project npm dependencies are out of date.
+- [debowerify](https://github.com/eugeneware/debowerify): A browserify transform to enable the easy use of bower components in browserify client javascript projects. This can be used in conjunction with deamdify to require AMD components from bower as well.
 - [del](https://github.com/sindresorhus/del): Delete files/folders using globs
 - [eslint](https://github.com/eslint/eslint): An AST-based pattern checker for JavaScript.
 - [eslint-config-gigigo](https://github.com/gigigo-html5/eslint-config-gigigo): This is the eslint config for GIGIGO web development
@@ -54,6 +49,7 @@ None
 - [gulp-david](https://github.com/cedx/david.gulp): David plugin for Gulp.js, the streaming build system.
 - [gulp-file-include](https://github.com/coderhaoxin/gulp-file-include): a gulp plugin for file include
 - [gulp-filter](https://github.com/sindresorhus/gulp-filter): Filter files in a vinyl stream
+- [gulp-htmlmin](https://github.com/jonschlinkert/gulp-htmlmin): gulp plugin to minify HTML.
 - [gulp-if](https://github.com/robrich/gulp-if): Conditionally run a task
 - [gulp-imagemin](https://github.com/sindresorhus/gulp-imagemin): Minify PNG, JPEG, GIF and SVG images
 - [gulp-inject](https://github.com/klei/gulp-inject): A javascript, stylesheet and webcomponent injection plugin for Gulp, i.e. inject file references into your index.html
@@ -75,6 +71,11 @@ None
 - [gulp-util](https://github.com/gulpjs/gulp-util): Utility functions for gulp plugins
 - [gulp-zopfli](https://github.com/pierreinglebert/gulp-zopfli): Zopfli compressor for gulp
 - [imagemin-pngquant](https://github.com/imagemin/imagemin-pngquant): pngquant imagemin plugin
+- [karma](https://github.com/karma-runner/karma): Spectacular Test Runner for JavaScript.
+- [karma-chrome-launcher](https://github.com/karma-runner/karma-chrome-launcher): A Karma plugin. Launcher for Chrome and Chrome Canary.
+- [karma-firefox-launcher](https://github.com/karma-runner/karma-firefox-launcher): A Karma plugin. Launcher for Firefox.
+- [karma-mocha](https://github.com/karma-runner/karma-mocha): A Karma plugin. Adapter for Mocha testing framework.
+- [mocha](https://github.com/mochajs/mocha): simple, flexible, fun test framework
 - [object-assign](https://github.com/sindresorhus/object-assign): ES6 Object.assign() ponyfill
 - [postcss-discard-comments](https://github.com/ben-eb/postcss-discard-comments): Discard comments in your CSS files with PostCSS.
 - [postcss-svgo](https://github.com/ben-eb/postcss-svgo): Optimise inline SVG with PostCSS.

@@ -12,32 +12,32 @@ import browserSync from './server';
 const p = loadPlugins();
 
 gulp.task('styles', () => {
-  browserSync.notify('Compiling Less files... Please Wait');
+    browserSync.notify('Compiling Less files... Please Wait');
 
-  var stream = combiner.obj([
-    gulp.src(join(src, 'styles', 'style.less')),
-    p.sourcemaps.init(),
-    p.less({
-      strictMath: true,
-      strictUnits: true
-    }),
-    p.postcss(
-      [
-        autoprefixer({
-          //browsers: ['last 2 versions']
-          browsers: browserAutoPrefixers,
-          cascade: false,
-          remove: false
+    var stream = combiner.obj([
+        gulp.src(join(src, 'styles', 'style.less')),
+        p.sourcemaps.init(),
+        p.less({
+            strictMath: true,
+            strictUnits: true
         }),
-        postcssDiscardComments({removeAll: true}),
-        cssnano
-      ]),
-    p.sourcemaps.write('.', {includeContent: false, sourceRoot: './front_end/styles'}),
-    gulp.dest(join(dest, 'styles')),
-    p.size({title: 'CSS', showFiles: true}),
-    p.filter('**/*.css'), // Filtering stream to only css files
-    browserSync.reload({stream: true})
-  ]);
+        p.postcss(
+            [
+                autoprefixer({
+                    //browsers: ['last 2 versions']
+                    browsers: browserAutoPrefixers,
+                    cascade: false,
+                    remove: false
+                }),
+                postcssDiscardComments({removeAll: true}),
+                cssnano
+            ]),
+        p.sourcemaps.write('.', {includeContent: false, sourceRoot: './front_end/styles'}),
+        gulp.dest(join(dest, 'styles')),
+        p.size({title: 'CSS', showFiles: true}),
+        p.filter('**/*.css'), // Filtering stream to only css files
+        browserSync.reload({stream: true})
+    ]);
 
-  return stream;
+    return stream;
 });

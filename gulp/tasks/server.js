@@ -9,22 +9,22 @@ const browserSync = bsCreate();
 
 gulp.task('server', () => {
 
-  const opts = {
-    files: {
-      //src: dest + 'styles/'
-      src: './dist/styles'
-    },
-    ui: {
-      port: server.port + 1
-    },
-    server: {
-      baseDir: dest
-    },
-    middleware: [require('connect-logger')()]
-  };
-  const serverOptions = Object.assign({}, server, opts);
+    const opts = {
+        files: {
+            //src: dest + 'styles/'
+            src: './dist/styles'
+        },
+        ui: {
+            port: server.port + 1
+        },
+        server: {
+            baseDir: dest
+        },
+        middleware: [require('connect-logger')()]
+    };
+    const serverOptions = Object.assign({}, server, opts);
 
-  browserSync.init(serverOptions);
+    browserSync.init(serverOptions);
 });
 
 export default browserSync;

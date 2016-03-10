@@ -20,83 +20,89 @@ import bundleLogger from '../utils/bundle-logger';
 const p = loadPlugins();
 
 const customOpts = {
-  entries: join(src, 'scripts', 'main.js'),
-  extensions: ['.jsx', '.js'],
-  debug: true,
-  poll: true,
-  transform: [
-    babelify,
-    debowerify
-  ]
+    entries: join(src, 'scripts', 'main.js'),
+    extensions: ['.jsx', '.js'],
+    debug: true,
+    poll: true,
+    transform: [
+        babelify,
+        debowerify
+    ]
 };
 
 const config = assign({}, watchify.args, customOpts);
 let buildBundler = browserify(config);
 
 function bundling() {
-  libs.forEach((lib => {
-    buildBundler.external(lib);
-  }));
+    libs.forEach((lib => {
+        buildBundler.external(lib);
+    }));
 
-  let bundle = () => {
+    let bundle = () => {
+        if (global.isWatching) {
+            bundleLogger.start();
+        }
+
+        return buildBundler
+            .bundle()
+            .on('error', handleErrors)
+            .pipe(source('bundle.js'))
+            .pipe(buffer())
+            .pipe(p.sourcemaps.init({
+                loadMaps: true
+            }))
+            .pipe(p.sourcemaps.write('.', {
+                includeContent: true,
+                sourceRoot: '.'
+            }))
+            .pipe(gulp.dest(join(dest, 'js')))
+            .pipe(p.size({
+                title: 'SCRIPTS'
+            }))
+            .on('end', () => {
+                if (global.isWatching) {
+                    bundleLogger.end();
+                }
+                browserSync.reload();
+            });
+
+    };
+
     if (global.isWatching) {
-      bundleLogger.start();
+        buildBundler = watchify(buildBundler, {
+            poll: true
+        });
+        buildBundler.on('update', bundle);
     }
 
-    return buildBundler
-      .bundle()
-      .on('error', handleErrors)
-      .pipe(source('bundle.js'))
-      .pipe(buffer())
-      .pipe(p.sourcemaps.init({loadMaps: true}))
-      .pipe(p.sourcemaps.write('.', {
-        includeContent: true,
-        sourceRoot: '.'
-      }))
-      .pipe(gulp.dest(dest))
-      .pipe(p.size({title: 'SCRIPTS'}))
-      .on('end', () => {
-        if(global.isWatching) {
-          bundleLogger.end();
-        }
-        browserSync.reload();
-      });
-
-  };
-
-  if (global.isWatching) {
-    buildBundler = watchify(buildBundler, {poll: true});
-    buildBundler.on('update', bundle);
-  }
-
-  return bundle();
+    return bundle();
 }
 
 gulp.task('scripts-vendor', () => {
-  let b = browserify();
+    let b = browserify();
 
-  libs.forEach((lib) => {
-    gutil.log('lib: ', lib);
-    b.require(lib);
-  });
+    libs.forEach((lib) => {
+        gutil.log('lib: ', lib);
+        b.require(lib);
+    });
 
-  return b.bundle()
-    .on('error', handleErrors)
-    .pipe(source('vendor.js'))
-    .pipe(buffer())
-    .pipe(p.sourcemaps.init())
-    .pipe(p.sourcemaps.write('.', {
-      includeContent: true,
-      sourceRoot: '.'
-    }))
-    .pipe(gulp.dest(dest))
-    .pipe(p.size({title: 'JS VENDOR'}));
+    return b.bundle()
+        .on('error', handleErrors)
+        .pipe(source('vendor.js'))
+        .pipe(buffer())
+        .pipe(p.sourcemaps.init())
+        .pipe(p.sourcemaps.write('.', {
+            includeContent: true,
+            sourceRoot: '.'
+        }))
+        .pipe(gulp.dest(join(dest, 'js')))
+        .pipe(p.size({title: 'JS VENDOR'}));
 });
 
 gulp.task('scripts', ['scripts-vendor'], () => {
-  return bundling();
+    return bundling();
 });
 
 gulp.task('js', () => {
-  return bundling();
+    return bundling();
 });

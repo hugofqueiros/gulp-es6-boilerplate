@@ -7,7 +7,7 @@ import { src, dest } from '../config';
 const p = loadPlugins();
 
 gulp.task('fonts', () => {
-  gulp.src(join(dest, '*.html'))
-    .pipe(gulp.dest(dest))
-    .pipe(p.size({title: 'HTML MIN'}))
+    gulp.src(join(dest, '*.html'))
+        .pipe(gulp.dest(dest))
+        .pipe(p.size({title: 'HTML MIN'}))
 });

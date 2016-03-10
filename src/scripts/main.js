@@ -1,10 +1,10 @@
 import utils from './utils';
 
-console.log('Hello World!', utils);
+console.warn('Hello World!', utils);
 
-if(!utils.isDeviceMobile()) {
-  console.log('not mobile');
+if (!utils.isDeviceMobile()) {
+    console.warn('not mobile');
 }
 else {
-  console.log('mobile device');
+    console.warn('mobile device');
 }
