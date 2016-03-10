@@ -5,7 +5,8 @@ node_js:
   - "0.12"
   - "4.2"
   - "5.0"
-
+before_install:
+  "npm set progress=false"
 branches:
   only:
     - master
