@@ -7,14 +7,11 @@ import { dest } from '../config';
 const p = loadPlugins();
 
 gulp.task('changelog', () => {
-    return gulp.src('CHANGELOG.md',
-        {
-            buffer: false
-        })
+    return gulp.src('CHANGELOG.md')
         .pipe(conventionalChangelog({
             preset: 'angular'
         }))
-        .pipe(gulp.dest(dest))
+        .pipe(gulp.dest('./'))
         .pipe(p.size({
             title: 'Changelog'
         }));
