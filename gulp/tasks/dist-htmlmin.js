@@ -6,13 +6,14 @@ import { dest } from '../config';
 
 const p = loadPlugins();
 
-gulp.task('fonts', () => {
+gulp.task('dist:htmlmin', () => {
     gulp.src(join(dest, '*.html'))
         .pipe(p.htmlmin({
             collapseWhitespace: true,
             removeComments: true,
             // lint: true,
-            minifyJS: true
+            minifyJS: true,
+            minifyCSS: true
         }))
         .pipe(gulp.dest(dest))
         .pipe(p.size({ title: 'HTML MIN' }));

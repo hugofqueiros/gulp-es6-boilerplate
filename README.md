@@ -10,6 +10,29 @@ Download node at [nodejs.org](http://nodejs.org) and install it, if you haven't 
 npm install gulp-es6-boilerplate --save
 ```
 
+### if using gulp-image-resize
+
+Make sure GraphicsMagick or ImageMagick is installed on your system and properly set up in your `PATH`.
+
+Ubuntu:
+
+```shell
+apt-get install imagemagick
+apt-get install graphicsmagick
+```
+
+Mac OS X (using [Homebrew](http://brew.sh/)):
+
+```shell
+brew install imagemagick
+brew install graphicsmagick
+```
+
+Windows & others:
+- GraphicsMagick: [http://www.graphicsmagick.org/download.html](http://www.graphicsmagick.org/download.html)
+- ImageMagick: [http://www.imagemagick.org/script/binary-releases.php](http://www.imagemagick.org/script/binary-releases.php)
+
+Confirm that GraphicsMagick or ImageMagick is properly set up by executing `gm -version` or `convert -version` in a terminal.
 
 ## Tests
 
