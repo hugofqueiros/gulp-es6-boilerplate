@@ -58,22 +58,30 @@ npm test
 - [browser-sync](https://github.com/browsersync/browser-sync): Live CSS Reload &amp; Browser Syncing
 - [browserify](https://github.com/substack/node-browserify): browser-side require() the node way
 - [connect-logger](https://github.com/geta6/connect-logger): connect middleware for logging
+- [conventional-changelog-cli](https://github.com/stevemao/conventional-changelog-cli): Generate a changelog from git metadata
 - [cssnano](https://github.com/ben-eb/cssnano): A modular minifier, built on top of the PostCSS ecosystem.
 - [david](https://github.com/alanshaw/david): Node.js module that tells you when your project npm dependencies are out of date.
 - [debowerify](https://github.com/eugeneware/debowerify): A browserify transform to enable the easy use of bower components in browserify client javascript projects. This can be used in conjunction with deamdify to require AMD components from bower as well.
 - [del](https://github.com/sindresorhus/del): Delete files/folders using globs
 - [eslint](https://github.com/eslint/eslint): An AST-based pattern checker for JavaScript.
 - [eslint-config-gigigo](https://github.com/gigigo-html5/eslint-config-gigigo): This is the eslint config for GIGIGO web development
+- [eslint-plugin-html](https://github.com/BenoitZugmeyer/eslint-plugin-html): An ESLint plugin to extract and lint scripts from HTML files.
+- [eslint-plugin-promise](https://github.com/xjamundx/eslint-plugin-promise): Enforce best practices for JavaScript promises
 - [gulp](https://github.com/gulpjs/gulp): The streaming build system
 - [gulp-autoprefixer](https://github.com/sindresorhus/gulp-autoprefixer): Prefix CSS
 - [gulp-changed](https://github.com/sindresorhus/gulp-changed): Only pass through changed files
 - [gulp-cheerio](https://github.com/KenPowers/gulp-cheerio): Manipulate HTML and XML files with Cheerio in Gulp.
+- [gulp-concat](https://github.com/wearefractal/gulp-concat): Concatenates files
+- [gulp-conventional-changelog](https://github.com/stevemao/gulp-conventional-changelog): Generate a changelog using conventional-changelog
 - [gulp-csso](https://github.com/ben-eb/gulp-csso): Minify CSS with CSSO.
 - [gulp-david](https://github.com/cedx/david.gulp): David plugin for Gulp.js, the streaming build system.
+- [gulp-eslint](https://github.com/adametry/gulp-eslint): A gulp plugin for processing files with ESLint
 - [gulp-file-include](https://github.com/coderhaoxin/gulp-file-include): a gulp plugin for file include
 - [gulp-filter](https://github.com/sindresorhus/gulp-filter): Filter files in a vinyl stream
+- [gulp-gzip](https://github.com/jstuckey/gulp-gzip): Gzip plugin for gulp.
 - [gulp-htmlmin](https://github.com/jonschlinkert/gulp-htmlmin): gulp plugin to minify HTML.
 - [gulp-if](https://github.com/robrich/gulp-if): Conditionally run a task
+- [gulp-image-resize](https://github.com/scalableminds/gulp-image-resize): Resizing images made easy.
 - [gulp-imagemin](https://github.com/sindresorhus/gulp-imagemin): Minify PNG, JPEG, GIF and SVG images
 - [gulp-inject](https://github.com/klei/gulp-inject): A javascript, stylesheet and webcomponent injection plugin for Gulp, i.e. inject file references into your index.html
 - [gulp-less](https://github.com/plus3network/gulp-less): Less for Gulp
@@ -92,14 +100,14 @@ npm test
 - [gulp-uglify](https://github.com/terinjokes/gulp-uglify): Minify files with UglifyJS.
 - [gulp-useref](https://github.com/jonkemp/gulp-useref): Parse build blocks in HTML files to replace references to non-optimized scripts or stylesheets.
 - [gulp-util](https://github.com/gulpjs/gulp-util): Utility functions for gulp plugins
-- [gulp-zopfli](https://github.com/pierreinglebert/gulp-zopfli): Zopfli compressor for gulp
+- [gulp-vulcanize](https://github.com/sindresorhus/gulp-vulcanize): Concatenate a set of Web Components into one file
 - [imagemin-pngquant](https://github.com/imagemin/imagemin-pngquant): pngquant imagemin plugin
 - [karma](https://github.com/karma-runner/karma): Spectacular Test Runner for JavaScript.
-- [karma-chrome-launcher](https://github.com/karma-runner/karma-chrome-launcher): A Karma plugin. Launcher for Chrome and Chrome Canary.
-- [karma-firefox-launcher](https://github.com/karma-runner/karma-firefox-launcher): A Karma plugin. Launcher for Firefox.
 - [karma-mocha](https://github.com/karma-runner/karma-mocha): A Karma plugin. Adapter for Mocha testing framework.
+- [karma-phantomjs-launcher](https://github.com/karma-runner/karma-phantomjs-launcher): A Karma plugin. Launcher for PhantomJS.
 - [mocha](https://github.com/mochajs/mocha): simple, flexible, fun test framework
 - [object-assign](https://github.com/sindresorhus/object-assign): ES6 Object.assign() ponyfill
+- [phantomjs-prebuilt](https://github.com/Medium/phantomjs): Headless WebKit with JS API
 - [postcss-discard-comments](https://github.com/ben-eb/postcss-discard-comments): Discard comments in your CSS files with PostCSS.
 - [postcss-svgo](https://github.com/ben-eb/postcss-svgo): Optimise inline SVG with PostCSS.
 - [pretty-hrtime](https://github.com/robrich/pretty-hrtime): process.hrtime() to words
@@ -118,5 +126,3 @@ npm test
 ## License
 
 MIT
-
-_Generated by [package-json-to-readme](https://github.com/zeke/package-json-to-readme)_

@@ -12,10 +12,13 @@
     "david:update": "david update",
     "karma": "karma start karma.conf.js --log-level debug --single-run",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
-    "release:patch": "gulp changelog && npm version patch -m \"chore(release): Bump to %s\"",
-    "release:minor": "gulp changelog && npm version minor -m \"chore(release): Bump to %s\"",
-    "release:major": "gulp changelog && npm version major -m \"chore(release): Bump to %s\"",
-    "postversion": "git push --follow-tags"
+    "release:patch": "npm version patch -m \"chore(release): Bump to %s\" && gulp changelog",
+    "release:minor": "npm version minor -m \"chore(release): Bump to %s\" && gulp changelog",
+    "release:major": "npm version major -m \"chore(release): Bump to %s\" && gulp changelog",
+    "postversion": "git push --follow-tags",
+    "gulp:dev": "gulp --env develop",
+    "gulp:stag": "gulp --env staging",
+    "gulp:prod": "gulp --env production"
   },
   "repository": {
     "type": "git",
