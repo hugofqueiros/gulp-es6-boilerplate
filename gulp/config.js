@@ -15,6 +15,12 @@ module.exports = {
         port: 3000,
         open: false
     },
+    environment: {
+        env: 'develop',
+        minifyJs: false,
+        minifyCSS: false,
+        sourcemaps: true
+    },
     browserAutoPrefixers: [
         'ie >= 11',
         'ie_mob >= 11',

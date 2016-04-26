@@ -3,15 +3,15 @@ import prettyHrtime from 'pretty-hrtime';
 
 let startTime;
 
-const bundleLogger = {
+let bundleLogger = {
     start: (filepath) => {
         startTime = process.hrtime();
-        gutil.log('Bundling', gutil.colors.green(filepath));
+        gutil.log('Start Bundler', gutil.colors.green(filepath));
     },
     end: (filepath) => {
         const taskTime = process.hrtime(startTime);
         const prettyTime = prettyHrtime(taskTime);
-        gutil.log('Bundled', gutil.colors.green(filepath), 'in',
+        gutil.log('End Bundler', gutil.colors.green(filepath), 'in',
             gutil.colors.magenta(prettyTime));
     }
 };

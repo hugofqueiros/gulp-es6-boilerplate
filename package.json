@@ -16,9 +16,9 @@
     "release:minor": "npm run changelog && npm version minor -m \"chore(release): Bump to %s\"",
     "release:major": "npm run changelog && npm version major -m \"chore(release): Bump to %s\"",
     "postversion": "git push --follow-tags",
-    "gulp:dev": "gulp --env develop",
-    "gulp:stag": "gulp --env staging",
-    "gulp:prod": "gulp --env production"
+    "gulp:dev": "gulp dist --env develop",
+    "gulp:stag": "gulp dist --env staging",
+    "gulp:prod": "gulp dist --env production"
   },
   "repository": {
     "type": "git",
@@ -57,7 +57,6 @@
     "conventional-changelog-cli": "^1.1.1",
     "cssnano": "^3.5.2",
     "david": "^7.0.1",
-    "debowerify": "^1.4.1",
     "del": "^2.2.0",
     "eslint": "^2.3.0",
     "eslint-config-gigigo": "1.2.3",
@@ -95,7 +94,6 @@
     "gulp-uglify": "^1.5.3",
     "gulp-useref": "^3.0.7",
     "gulp-util": "^3.0.7",
-    "gulp-vulcanize": "^6.1.0",
     "imagemin-pngquant": "^4.2.2",
     "karma": "^0.13.21",
     "karma-mocha": "^0.2.2",

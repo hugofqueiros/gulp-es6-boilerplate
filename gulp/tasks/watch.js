@@ -7,6 +7,7 @@ gulp.task('setWatch', () => {
     gulp.watch(join(src, 'html', '**/*.html'), ['markup']);
     gulp.watch(join(src, 'styles', '**/*.less'), ['styles']);
     gulp.watch(join(src, 'images', '**/*'), ['images']);
-    gulp.watch(join(src, 'scripts', '**/*'), ['js']);
+    //gulp.watch('./dist/js/**.*.js', )
+    // gulp.watch(join(src, 'scripts', '**/*'), ['js']);
     gulp.watch(join(src, 'fonts', '**/*'), ['fonts']);
 });

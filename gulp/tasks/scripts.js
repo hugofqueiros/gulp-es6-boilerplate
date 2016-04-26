@@ -18,6 +18,7 @@ import handleErrors from '../utils/handle-errors';
 import bundleLogger from '../utils/bundle-logger';
 
 const p = loadPlugins();
+const reload = browserSync.reload;
 
 const customOpts = {
     entries: join(src, 'scripts', 'main.js'),
@@ -56,15 +57,15 @@ function bundling() {
                 sourceRoot: '.'
             }))
             .pipe(gulp.dest(join(dest, 'js')))
-            .pipe(p.size({
-                title: 'SCRIPTS'
-            }))
             .on('end', () => {
                 if (global.isWatching) {
                     bundleLogger.end();
                 }
-                browserSync.reload();
-            });
+                reload();
+            })
+            .pipe(p.size({
+                title: 'SCRIPTS'
+            }));
     };
 
     if (global.isWatching) {

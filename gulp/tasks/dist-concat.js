@@ -1,5 +1,4 @@
 import gulp from 'gulp';
-import gutil from 'gulp-util';
 import loadPlugins from 'gulp-load-plugins';
 import { join } from 'path';
 import { dest } from '../config';
