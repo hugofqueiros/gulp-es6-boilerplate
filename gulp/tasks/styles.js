@@ -31,7 +31,13 @@ gulp.task('styles', () => {
                 postcssDiscardComments({
                     removeAll: true
                 }),
-                cssnano
+                cssnano({
+                    restructure: true
+                    // ,
+                    // sourceMap: true,
+                    // debug: true,
+                    // type: null
+                })
             ]),
         p.sourcemaps.write('.', {
             includeContent: false, sourceRoot: './front_end/styles'
