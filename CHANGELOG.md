@@ -1,3 +1,13 @@
+<a name="0.1.1"></a>
+## [0.1.1](https://github.com/hugofqueiros/gulp-es6-boilerplate/compare/v0.1.0...v0.1.1) (2016-08-12)
+
+
+### Features
+
+* **docker:** first commit with dockerfile ([926562b](https://github.com/hugofqueiros/gulp-es6-boilerplate/commit/926562b))
+
+
+
 <a name="0.1.0"></a>
 # [0.1.0](https://github.com/hugofqueiros/gulp-es6-boilerplate/compare/v0.0.4...v0.1.0) (2016-08-12)
 
