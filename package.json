@@ -1,6 +1,6 @@
 {
   "name": "gulp-es6-boilerplate",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Gulp ES6 Boilerplate",
   "main": "gulpfile.babel.js",
   "scripts": {
@@ -12,7 +12,7 @@
     "david:update": "david update",
     "karma": "karma start karma.conf.js --log-level debug --single-run",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
-    "release:patch": "npm run changelog && git add CHANGELOG.md && git commit -m \"docs(changelog): update\" && npm version patch -m \"chore(release): Bump to %s\"",
+    "release:patch": "npm version patch -m \"chore(release): Bump to %s\"",
     "release:minor": "npm run changelog && git add CHANGELOG.md && git commit -m \"docs(changelog): update\" && npm version minor -m \"chore(release): Bump to %s\"",
     "release:major": "npm run changelog && git add CHANGELOG.md && git commit -m \"docs(changelog): update\" && npm version major -m \"chore(release): Bump to %s\"",
     "postversion": "git push --follow-tags",
