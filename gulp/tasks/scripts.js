@@ -4,7 +4,6 @@ import loadPlugins from 'gulp-load-plugins';
 import browserify from 'browserify';
 import watchify from 'watchify';
 import babelify from 'babelify';
-// import debowerify from 'debowerify';
 import assign from 'object-assign';
 import { join } from 'path';
 
@@ -27,7 +26,6 @@ const customOpts = {
     poll: true,
     transform: [
         babelify
-        // ,debowerify
     ]
 };
 
