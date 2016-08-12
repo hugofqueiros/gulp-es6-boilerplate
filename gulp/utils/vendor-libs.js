@@ -1,5 +1,7 @@
 const libs = [
-    'lodash'
+    'lodash',
+    'font-awesome',
+    'rrssb'
 ];
 
 export default libs;
