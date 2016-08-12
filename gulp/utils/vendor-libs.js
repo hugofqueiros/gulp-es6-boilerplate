@@ -1,6 +1,5 @@
 const libs = [
     'lodash',
-    'font-awesome',
     'rrssb'
 ];
 
