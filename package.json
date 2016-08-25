@@ -8,6 +8,7 @@
     "start": "gulp",
     "test": "gulp lint && gulp test",
     "lint": "gulp lint",
+    "serve": "gulp server",
     "david": "david",
     "david:update": "david update",
     "karma": "karma start karma.conf.js --log-level debug --single-run",

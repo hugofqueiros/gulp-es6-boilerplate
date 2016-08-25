@@ -17,9 +17,9 @@ gulp.task('dist', ['clean'], (cb) => {
         'scripts',
         'dist:copy',
         'dist:replace',
-        'dist:htmlmin',
+        //'dist:htmlmin',
         'dist:concat',
         function() {
-            del([join(dest, 'scripts', 'vendor.*'), join(dest, 'scripts', 'bundle.*')], {}, cb)
+            del([join(dest, 'scripts', 'vendor.*'), join(dest, 'scripts', 'bundle.*'), join(dest, 'html')], {}, cb)
         });
 });
