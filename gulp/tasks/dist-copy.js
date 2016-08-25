@@ -9,7 +9,7 @@ const p = loadPlugins();
  * This task has the function of only copying what doesn't require any treatment
  */
 gulp.task('dist:copy', function() {
-    var copyRootFiles = gulp.src([join(src, 'html', '*.{txt, xml, json, webapp}')],
+    var copyRootFiles = gulp.src([join(src, 'html', '*.{html,xml,json,webapp,txt}')],
         {
             dot: true
         })
