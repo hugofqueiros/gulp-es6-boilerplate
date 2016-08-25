@@ -8,8 +8,8 @@ const p = loadPlugins();
 /**
  * This task has the function of only copying what doesn't require any treatment
  */
-gulp.task('dist:copy', function() {
-    var copyRootFiles = gulp.src([join(src, 'html', '*.{txt, xml, json, webapp}')],
+gulp.task('dist:copy', ['dist:copy:markup'], function() {
+    var copyRootFiles = gulp.src([join(src, 'html', '*.{xml,json,webapp,txt}')],
         {
             dot: true
         })
@@ -19,4 +19,18 @@ gulp.task('dist:copy', function() {
         }));
 
     return copyRootFiles;
+});
+
+gulp.task('dist:copy:markup', function() {
+    var copyRootFiles = gulp.src(join(src, 'html', 'index.html'),
+        {
+            dot: true
+        })
+        .pipe(gulp.dest(join(dest, 'html')))
+        .pipe(p.size({
+            title: 'DIST COPY  :'
+        }));
+
+    return copyRootFiles;
+
 });

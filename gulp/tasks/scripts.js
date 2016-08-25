@@ -54,7 +54,7 @@ function bundling() {
                 includeContent: true,
                 sourceRoot: '.'
             }))
-            .pipe(gulp.dest(join(dest, 'js')))
+            .pipe(gulp.dest(join(dest, 'scripts')))
             .on('end', () => {
                 if (global.isWatching) {
                     bundleLogger.end();
@@ -93,7 +93,7 @@ gulp.task('scripts-vendor', () => {
             includeContent: true,
             sourceRoot: '.'
         }))
-        .pipe(gulp.dest(join(dest, 'js')))
+        .pipe(gulp.dest(join(dest, 'scripts')))
         .pipe(p.size({
             title: 'JS VENDOR'
         }));

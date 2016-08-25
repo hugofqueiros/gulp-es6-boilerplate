@@ -6,10 +6,6 @@ Gulp ES6 Boilerplate
 
 Download node at [nodejs.org](http://nodejs.org) and install it, if you haven't already.
 
-```sh
-npm install gulp-es6-boilerplate --save
-```
-
 ### if using gulp-image-resize
 
 Make sure GraphicsMagick or ImageMagick is installed on your system and properly set up in your `PATH`.
@@ -41,10 +37,45 @@ npm install
 npm test
 ```
 
+## Running
+
+### Develop environment
+
+```sh
+npm start
+```
+
+### Production environment
+```sh
+npm dist
+```
+
+### Commit guidelines (conventional changelog)
+[Conventional Changelog Angular](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit)
+
+## Release a new version
+
+- copy everything to package root and change some paths on files
+```
+npm run release
+```
+
+- merge (ONLY) from develop to master
+```
+git merge --no-ff develop
+```
+
+- release (patch, minor or major) package and push changes to repo
+```
+npm run release:[version]
+git push
+```
+
 ## Dependencies
 
 - [font-awesome](https://github.com/FortAwesome/Font-Awesome): The iconic font and CSS framework
 - [lodash](https://github.com/lodash/lodash): Lodash modular utilities.
+- [rrssb](https://github.com/kni-labs/rrssb): Ridiculously Responsive Social Sharing Buttons
 
 ## Dev Dependencies
 
@@ -120,3 +151,7 @@ npm test
 ## License
 
 MIT
+
+## Acknowledgement
+
+Would like to thank Hugo Dias (https://github.com/hugomrdias) for sharing all his knowledge.

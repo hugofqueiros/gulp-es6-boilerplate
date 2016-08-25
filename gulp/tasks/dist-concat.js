@@ -7,7 +7,7 @@ import handleErrors from '../utils/handle-errors';
 const p = loadPlugins();
 
 gulp.task('dist:concat', () => {
-    return gulp.src([join(dest, 'js', 'bundle.js'), join(dest, 'js', 'vendor.js')])
+    return gulp.src([join(dest, 'scripts', 'bundle.js'), join(dest, 'scripts', 'vendor.js')])
         .on('error', handleErrors)
         .pipe(p.sourcemaps.init({
             loadMaps: true
@@ -24,10 +24,10 @@ gulp.task('dist:concat', () => {
         .pipe(p.size({
             title: 'JS Minified', showFiles: true
         }))
-        .pipe(gulp.dest(join(dest, 'js')))
+        .pipe(gulp.dest(join(dest, 'scripts')))
         .pipe(p.gzip())
         .pipe(p.size({
             title: 'JS GZiped'
         }))
-        .pipe(gulp.dest(join(dest, 'js')));
+        .pipe(gulp.dest(join(dest, 'scripts')));
 });
