@@ -75,6 +75,7 @@ git push
 
 - [font-awesome](https://github.com/FortAwesome/Font-Awesome): The iconic font and CSS framework
 - [lodash](https://github.com/lodash/lodash): Lodash modular utilities.
+- [rrssb](https://github.com/kni-labs/rrssb): Ridiculously Responsive Social Sharing Buttons
 
 ## Dev Dependencies
 
