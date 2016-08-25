@@ -1,3 +1,19 @@
+<a name="1.0.0"></a>
+# [1.0.0](https://github.com/hugofqueiros/gulp-es6-boilerplate/compare/v0.1.1...v1.0.0) (2016-08-25)
+
+
+### Bug Fixes
+
+* **dist:** tweak on dist ([78772af](https://github.com/hugofqueiros/gulp-es6-boilerplate/commit/78772af))
+* **gulp:** dist: make sure dist is well generated ([b7937e3](https://github.com/hugofqueiros/gulp-es6-boilerplate/commit/b7937e3))
+
+
+### Features
+
+* **npm:** dist script ([093522c](https://github.com/hugofqueiros/gulp-es6-boilerplate/commit/093522c))
+
+
+
 <a name="0.1.1"></a>
 ## [0.1.1](https://github.com/hugofqueiros/gulp-es6-boilerplate/compare/v0.1.0...v0.1.1) (2016-08-12)
 
