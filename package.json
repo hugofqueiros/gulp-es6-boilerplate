@@ -1,6 +1,6 @@
 {
   "name": "gulp-es6-boilerplate",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "Gulp ES6 Boilerplate",
   "main": "gulpfile.babel.js",
   "scripts": {
