@@ -120,7 +120,7 @@
   },
   "dependencies": {
     "font-awesome": "^4.5.0",
-    "lodash": "^4.6.1",
+    "lodash": "^4.17.5",
     "rrssb": "^1.10.0"
   },
   "eslintConfig": {
